@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme{
+  --font-hero-font:Sriracha
+}
+.bg-primary{
+  background: rgb(231, 116, 244);
+}
+.bg-secondary{
+  background: rgb(223, 170, 228);
+}
+.mobile-navbar{
+  @apply  fixed top-10  bg-blue-500 w-full text-center left-0 p-4;
+}
+.mobile-navbar  li{
+  @apply  border-1 w-full h-full;
+}
+
+.project-view{
+  @apply text-white absolute bottom-0 left-0 right-0  top-0 pl-7 opacity-0  md:opacity-0 duration-300 md:hover:opacity-100;
+}
+
+.btn{
+  @apply border-2  p-0.5 ml-2   hover:bg-amber-500 rounded-lg
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
