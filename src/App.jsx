@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import './App.css'
-import Header from './componets/header'
-import Hero from './componets/hero'
-import Aboutme from './componets/aboutMe'
-import Project from './componets/project'
-import Overlay from './componets/try'
-import Resume from './componets/resume'
-import Contact from './componets/contact'
-import Footer from './componets/footer'
+import Header from './components/header'
+import Hero from './components/hero'
+import Aboutme from './components/aboutMe'
+import Project from './components/project'
+import Overlay from './components/try'
+import Resume from './components/resume'
+import Contact from './components/contact'
+import Footer from './components/footer'
 
 function App() {
   const [count, setCount] = useState(0)
