@@ -1,5 +1,3 @@
-import resume from '../assets/resume.jpg'
-
 export default function Resume() {
     const skills = {
         languages: ["Java", "Python", "C", "C++"],
@@ -22,8 +20,8 @@ export default function Resume() {
     ];
 
     return (
-        <section id="resume" className='section-container grid md:grid-cols-2 gap-12 items-start py-20'>
-            <div className="order-2 md:order-1 flex flex-col justify-center">
+        <section id="resume" className='section-container max-w-4xl mx-auto py-20 px-4'>
+            <div className="flex flex-col justify-center">
                 <div className="mb-12">
                     <h2 className='text-3xl font-bold text-gray-900 border-l-4 border-indigo-600 pl-4 mb-8'>
                         Skills
@@ -82,19 +80,6 @@ export default function Resume() {
                             </li>
                         ))}
                     </ul>
-                </div>
-            </div>
-
-            <div className="order-1 md:order-2 flex justify-center items-center">
-                <div className="relative w-full max-w-md lg:max-w-lg">
-                    <div className="absolute top-0 -left-4 w-64 h-64 lg:w-80 lg:h-80 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-                    <div className="absolute top-0 -right-4 w-64 h-64 lg:w-80 lg:h-80 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-                    <div className="absolute -bottom-8 left-20 w-64 h-64 lg:w-80 lg:h-80 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
-                    <img
-                        className='relative rounded-lg shadow-2xl w-full object-cover h-auto'
-                        src={resume}
-                        alt="Resume Preview"
-                    />
                 </div>
             </div>
         </section>
