@@ -13,21 +13,21 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed w-full top-0 left-0 bg-white shadow-md z-50">
+    <header className="fixed w-full top-0 left-0 bg-slate-900/80 backdrop-blur-md border-b border-white/10 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <a className="font-bold text-2xl text-gray-800 tracking-tight" href="#">
-            DHARANI<span className="text-indigo-600">. S</span>
+          <a className="font-bold text-2xl bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent tracking-tight" href="#">
+            DHARANI S
           </a>
 
           {/* Desktop Menu */}
           <nav className="hidden md:block">
-            <ul className="flex gap-8 text-gray-600 font-medium">
+            <ul className="flex gap-8 text-gray-300 font-medium">
               {navLinks.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="hover:text-indigo-600 transition duration-300"
+                    className="hover:text-indigo-400 transition duration-300"
                   >
                     {link.name}
                   </a>
@@ -38,7 +38,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="block md:hidden text-gray-800 focus:outline-none"
+            className="block md:hidden text-white focus:outline-none"
             onClick={() => setToggleMenu(!toggleMenu)}
           >
             {toggleMenu ? (

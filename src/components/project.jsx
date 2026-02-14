@@ -44,30 +44,35 @@ export default function Project() {
     ];
 
     return (
-        <section id="project" className="bg-gray-50 py-20 px-5">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="project" className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-5 overflow-hidden">
+            {/* Background elements */}
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]"></div>
+            <div className="absolute top-1/2 -right-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+            <div className="absolute top-1/4 -left-40 w-80 h-80 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+            
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Featured Projects</h2>
-                    <p className="mt-4 text-xl text-gray-600">
+                    <h2 className="text-3xl font-bold text-white sm:text-4xl">Featured Projects</h2>
+                    <p className="mt-4 text-xl text-gray-400">
                         Check out some of my recent work in full-stack and frontend development.
                     </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projects.map((project, index) => (
-                        <div key={index} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                        <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 hover:border-indigo-500/50 transition-all duration-300 flex flex-col">
                             <div className="h-48 overflow-hidden relative group">
                                 <img
                                     className="w-full h-full object-cover transform group-hover:scale-105 transition duration-500"
                                     src={project.image}
                                     alt={project.title}
                                 />
-                                <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                                <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
                                     <a
                                         href={project.link}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="bg-white text-gray-900 px-6 py-2 rounded-full font-bold hover:bg-indigo-600 hover:text-white transition duration-300"
+                                        className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-6 py-2 rounded-full font-bold hover:from-indigo-600 hover:to-purple-600 transition duration-300"
                                     >
                                         View Code
                                     </a>
@@ -75,15 +80,15 @@ export default function Project() {
                             </div>
 
                             <div className="p-6 flex-1 flex flex-col">
-                                <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
-                                <p className="text-gray-600 mb-4 flex-1 line-clamp-3">
+                                <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+                                <p className="text-gray-400 mb-4 flex-1 line-clamp-3">
                                     {project.description}
                                 </p>
                                 <div className="flex flex-wrap gap-2 mt-auto">
                                     {project.technologies.map((tech, i) => (
                                         <span
                                             key={i}
-                                            className="px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-semibold rounded-full"
+                                            className="px-3 py-1 bg-indigo-500/20 text-indigo-300 text-xs font-semibold rounded-full border border-indigo-500/30"
                                         >
                                             {tech}
                                         </span>
